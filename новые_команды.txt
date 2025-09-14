@@ -1,0 +1,54 @@
+# Инициализация нового репозитория
+git init
+
+# Клонирование удаленного репозитория
+git clone <url-репозитория>
+git clone git@github.com:user/repo.git  # через SSH
+
+# Проверка подключения к GitHub
+ssh -T git@github.com
+
+# Запуск SSH-агента
+eval "$(ssh-agent -s)"
+
+# Добавление SSH-ключа
+ssh-add ~/.ssh/id_ed25519
+
+# Проверить статус изменений
+git status
+
+# Добавить файлы в индекс (подготовка к коммиту)
+git add <имя_файла>      # конкретный файл
+git add .                # все файлы
+
+# Создать коммит с описанием
+git commit -m "Текст описания коммита"
+
+# Просмотр истории коммитов
+git log
+
+# Отправка изменений на сервер
+git push origin main
+
+# Получение изменений с сервера
+git pull origin main
+
+# Установка имени пользователя и email
+git config --global user.name "Ваше имя"
+git config --global user.email "ваш@email.com"
+
+# Проверка текущих настроек
+git config --list
+
+# Просмотр изменений в файлах
+git diff
+
+# Создание новой ветки
+git branch <имя_ветки>
+
+# Переключение между ветками
+git checkout <имя_ветки>
+
+echo "Мой новый файл" > new_file.txt
+
+touch new_file.txt
